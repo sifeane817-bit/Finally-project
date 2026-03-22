@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #0c232d;
+        }
+
+        #Links {
+            color: white;
+        }
+
+        #Links a:hover {
+            color: #0080FF;
+        }
+
+        .skills {
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .skills span {
+            color: #0080FF;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .skill p {
+            margin-bottom: 10px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 10px;
+            background: #1e293b;
+            border-radius: 10px;
+        }
+
+        .progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #0080FF, #0080FF);
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .css {
+            width: 80%;
+        }
+
+        .js {
+            width: 60%;
+        }
+
+        .react {
+            width: 60%;
+        }
+
+        .progress {
+            animation: fill 2s ease-in-out;
+        }
+
+        @keyframes fill {
+            from {
+                width: 0;
+            }
+        }
+
+        .skills {
+            padding: 60px 10%;
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+        }
+
+        .skills h2 span {
+            color: #0080FF;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            background: #1e293b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon img {
+            width: 35px;
+        }
+
+        .skill-info {
+            flex: 1;
+        }
+
+        .skill-info p {
+            margin: 0 0 8px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 8px;
+            background: #1e293b;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #0080FF, #0080FF);
+            animation: fill 2s ease-in-out;
+        }
+
+        .percent {
+            position: absolute;
+            right: 5px;
+            top: -20px;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        @keyframes fill {
+            from {
+                width: 0;
+            }
+        }
+
+        .html {
+            width: 90%;
+        }
+
+        .css {
+            width: 80%;
+        }
+
+        .js {
+            width: 60%;
+        }
+
+        .bootstrap {
+            width: 90%;
+        }
+
+        .card {
+            background-color: #1e272e;
+            color: white;
+
+        }
+
+        main {
+            background-color: #0c232d;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #0c232d;
+        }
+
+        footer #hover a li:hover {
+            color: #0080FF;
+        }
+
+        .container i {
+            color: #0080FF;
+            font-size: 24px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: 0.3s ease;
+        }
+
+        .container i:hover {
+            border: 1px solid #0080FF;
+            background-color: #0080FF;
+            color: #fff;
+        }
+
+        #card {
+            border-radius: 20px;
+            animation: card 2s ease;
+        }
+
+        @keyframes card {
+            from {
+                transform: translateX(-500px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        #card2 {
+            border-radius: 20px;
+            animation: card2 2s ease;
+        }
+
+        @keyframes card2 {
+            from {
+                transform: translateY(500px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+
+        #card3 {
+            border-radius: 20px;
+            animation: card3 2s ease;
+        }
+
+        @keyframes card3 {
+            from {
+                transform: translateX(500px);
+            }
+
+            to {
+                transform: translateX(0px);
+            }
+        }
+        #Scroll button {
+            background-color: #0080FF;
+            color: white;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark px-5">
+            <a href="#" class="navbar-brand fw-bold">S A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto" id="Links">
+                    <a href="index.html" class="nav-item nav-link active fw-bold">Home</a>
+                    <a href="About me.html" class="nav-item nav-link fw-bold active">About Me</a>
+                    <a href="Contact me.html" class="nav-item nav-link fw-bold active">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <title>My Skills</title>
+        </head>
+
+        <body>
+            <section class="skills">
+                <h2 class="text-light fw-bold">My<span class="fw-bold"> Skills</span></h2>
+                <div class="skills-container">
+                    <div class="skill">
+                        <div class="icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+                        </div>
+                        <div class="skill-info">
+                            <p>HTML - 5</p>
+                            <div class="bar">
+                                <div class="progress html"></div>
+                                <span class="percent">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+                        </div>
+                        <div class="skill-info">
+                            <p>CSS - 3</p>
+                            <div class="bar">
+                                <div class="progress css"></div>
+                                <span class="percent">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                        </div>
+                        <div class="skill-info">
+                            <p>JavaScript</p>
+                            <div class="bar">
+                                <div class="progress js"></div>
+                                <span class="percent">60%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="icon">
+                            <img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg">
+                        </div>
+                        <div class="skill-info">
+                            <p>Bootstrap</p>
+                            <div class="bar">
+                                <div class="progress bootstrap"></div>
+                                <span class="percent">90%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <main class="secondary-bg-color">
+                <h2 class="fw-bold text-center text-light">My <span style="color: #0080FF;"
+                        class="fw-bold">Services</span></h2>
+                <div class="row px-5">
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4">
+                        <div class="card text-center" id="card">
+                            <div class="card-body">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2910/2910763.png" width="60"
+                                    style="filter: brightness(0) invert(1);">
+                                <h4 class="fw-bold" style="color: #0080FF;">Web Design</h4>
+                                <p>I am professional Web Developer. I have designed more than 50 web template for my
+                                    client.
+                                    You can hire me for design your personal, business or other website template. You
+                                    can
+                                    trust me. I complied your work with your full satisfaction </p>
+                                <button class="btn btn-light pe-5 ps-5">Hire me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 mt-2">
+                        <div class="card text-center" id="card2">
+                            <div class="card-body">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" width="60">
+                                <h4 class="fw-bold" style="color: #0080FF;">Web Development</h4>
+                                <p>I am professional Web Developer. I have designed more than 50 web template for my
+                                    client.
+                                    You can hire me for design your personal, business or other website template. You
+                                    can
+                                    trust me. I complied your work with your full satisfaction </p>
+                                <button class="btn btn-light pe-5 ps-5">Hire me</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 mt-2">
+                        <div class="card text-center" id="card3">
+                            <div class="card-body">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png" width="60">
+                                <h4 class="fw-bold" style="color: #0080FF;">Graphic Design</h4>
+                                <p>I am professional Web Developer. I have designed more than 50 web template for my
+                                    client.
+                                    You can hire me for design your personal, business or other website template. You
+                                    can
+                                    trust me. I complied your work with your full satisfaction </p>
+                                <button class="btn btn-light pe-5 ps-5">Hire me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </body>
+
+        </html>
+    </header>
+    <footer class="pt-5">
+        <div class="row px-5">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 text-light">
+                <h2 class="fw-bold">My profile</h2>
+                <p>Front-end developers build responsive, interactive websites using HTML, CSS, and JavaScript
+                    technologies for modern users.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 text-light text-center">
+                <div class="container">
+                    <h2 class="fw-bold">Follow me</h2>
+                    <a href="https://www.linkedin.com/in/sife-ane-3b8b373b7/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/zead.aemn.5" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sifeaneaymen/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/AneSife48709" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 text-center" id="hover">
+                <h2 class="fw-bold text-light">Quick access</h2>
+                <ol style="list-style-type: none;">
+                    <a href="index.html" class="text-decoration-none text-light">
+                        <li>Home</li>
+                    </a>
+                    <a href="About me.html" class="text-decoration-none text-light">
+                        <li>About Me</li>
+                    </a>
+                    <a href="Contact me.html" class="text-decoration-none text-light">
+                        <li>Contact me</li>
+                    </a>
+                </ol>
+            </div>
+        </div>
+        <div class="text-light text-center pb-5 pt-4 fw-bold">
+            <p>This project create by student <span style="color: #0080FF;">Seif Aymen</span></p>
+        </div>
+        <div class="d-flex" id="Scroll">
+            <button class="btn btn-sm text-light ms-auto" onclick="s()">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+    <script>
+        function s(){
+            window.scrollTo({
+                top: 0 ,
+                behavior:"smooth"
+            })
+        }
+    </script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

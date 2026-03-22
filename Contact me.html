@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        header {
+            background-color: #0c232d;
+        }
+
+        footer {
+            background-color: #0c232d;
+        }
+
+        aside {
+            background-color: #0c232d;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-box {
+            width: 700px;
+        }
+
+        .form-control {
+            background: #1e1e1e;
+            border: none;
+            color: #fff;
+            padding: 14px;
+        }
+
+        .form-control::placeholder {
+            color: #aaa;
+        }
+
+        .form-control:focus {
+            background: #1e1e1e;
+            color: #fff;
+            box-shadow: none;
+        }
+
+        textarea {
+            height: 160px;
+        }
+
+        .btn-send {
+            background: #0d6efd;
+            border: none;
+            padding: 10px 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #0d6efd;
+        }
+
+        .container i {
+            color: #0080FF;
+            font-size: 24px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            padding: 10px;
+            transition: 0.3s ease;
+        }
+
+        .container i:hover {
+            border: 1px solid #0080FF;
+            background-color: #0080FF;
+            color: #fff;
+        }
+
+        #Links {
+            color: white;
+        }
+
+        #Links a:hover {
+            color: #0080FF;
+        }
+        #form{
+            animation: seif 2s ease;
+        }
+        @keyframes seif{
+            from{
+                transform: translateY(500px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark px-5">
+            <a href="#" class="navbar-brand fw-bold">S A</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto" id="Links">
+                    <a href="index.html" class="nav-item nav-link active fw-bold">Home</a>
+                    <a href="About me.html" class="nav-item nav-link fw-bold active">About Me</a>
+                    <a href="Contact me.html" class="nav-item nav-link fw-bold active">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <aside id="Contact me">
+        <div class="contact-box text-center text-white" id="form">
+            <h4 class="mb-4 title">Contact <span style="color: #0080FF;">Me?</span></h4>
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="First Name" id="FirstName">
+                        <p id="text text-danger"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last Name" id="LastName">
+                        <p id="text1 text-danger"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email" id="Email">
+                        <p class="text-danger" id="P"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="number" class="form-control" placeholder="Phone Number" id="PhoneNumber">
+                        <p id="P2" class="text-danger"></p>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Message" id="Message"></textarea>
+                        <p class="text"></p>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <button class="btn pe-4 ps-4" type="button" style="background-color: #0080FF; color: white;"
+                            onclick="s()">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </aside>
+    <footer class="pt-5">
+        <div class="row px-5">
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 text-light">
+                <h2 class="fw-bold">My profile</h2>
+                <p>Front-end developers build responsive, interactive websites using HTML, CSS, and JavaScript
+                    technologies for modern users.</p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4 text-light text-center">
+                <div class="container">
+                    <h2 class="fw-bold">Follow me</h2>
+                    <a href="https://www.linkedin.com/in/sife-ane-3b8b373b7/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/zead.aemn.5" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/sifeaneaymen/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/AneSife48709" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-4 col-xxl-4  text-center">
+                <h2 class="fw-bold text-light">Quick access</h2>
+                <ol style="list-style-type: none;">
+                    <a href="index.html" class="text-decoration-none text-light">
+                        <li>Home</li>
+                    </a>
+                    <a href="About me.html" class="text-decoration-none text-light">
+                        <li>About Me</li>
+                    </a>
+                    <a href="Contact me.html" class="text-decoration-none text-light">
+                        <li>Contact me</li>
+                    </a>
+                </ol>
+            </div>
+        </div>
+        <div class="text-light text-center pb-5 pt-4 fw-bold">
+            <p>This project create by student <span style="color: #0080FF;">Seif Aymen</span></p>
+        </div>
+    </footer>
+    <script>
+        function s() {
+            let FirstName = document.getElementById("FirstName").value;
+            let LastName = document.getElementById("LastName").value;
+            let Email = document.getElementById("Email").value;
+            let PhoneNumber = document.getElementById("PhoneNumber").value;
+            let Message = document.getElementById("Message").value;
+            let P = document.getElementById("P");
+            let P2 = document.getElementById("P2");
+            if (FirstName == "" || LastName == "" || Email == "" || PhoneNumber == "" || Message == "") {
+                alert("PLease fill all form")
+            }
+            if (Email.indexOf("@") == -1 || Email.indexOf(".") == -1) {
+                P.innerText = "Please write @ and . in the email"
+            }
+            else {
+                P.innerText = "";
+            }
+            if (PhoneNumber.length !== 11) {
+                P2.innerText = "Phone number must be 11 digits";
+            } else {
+                P2.innerText = "";
+            }
+        }
+    </script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
